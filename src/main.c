@@ -271,6 +271,7 @@ int main() {
     if ( has_colors() == FALSE ) {
         endwin();
         perror( "Your terminal doesn't support colors." );
+        return 1;
     }
 
     start_color();
