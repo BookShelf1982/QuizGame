@@ -1,5 +1,5 @@
-CFLAGS := -MMD -Wall -g
-LDLIBS := -lncurses -lcurl
+CFLAGS := -MMD -Wall -O3 `pkg-config --cflags libcurl` `pkg-config --cflags ncurses`
+LDLIBS := `pkg-config --libs libcurl` `pkg-config --libs ncurses`
 
 SRC = $(wildcard src/*.c)
 OBJ = $(patsubst src/%.c, obj/%.o, $(SRC))

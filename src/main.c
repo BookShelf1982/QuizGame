@@ -188,7 +188,7 @@ void draw_answerbox( WINDOW *win, uint32_t selidx, const char *answers[], uint32
 
 void draw_questionbox( WINDOW *win, const char *question, int *y, int *x ) {
     move( 1, 1 );
-    wprintw( win, question );
+    wprintw( win, "%s", question );
     *y = getcury( win );
     *x = getcurx( win );
 }
